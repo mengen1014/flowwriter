@@ -1,0 +1,12 @@
+${AnsiColor.BRIGHT_GREEN}
+		______  _                   _    _        _  _               
+		|  ___|| |                 | |  | |      (_)| |              
+		| |_   | |  ___  __      __| |  | | _ __  _ | |_   ___  _ __ 
+		|  _|  | | / _ \ \ \ /\ / /| |/\| || '__|| || __| / _ \| '__|
+		| |    | || (_) | \ V  V / \  /\  /| |   | || |_ |  __/| |   
+		\_|    |_| \___/   \_/\_/   \/  \/ |_|   |_| \__| \___||_|  
+		
+${AnsiColor.BRIGHT_RED}
+Application Name: ${application.name}${AnsiColor.DEFAULT}
+Application Version: ${application.version}${AnsiColor.DEFAULT}
+Spring Boot Version: ${spring-boot.version}${AnsiColor.DEFAULT}

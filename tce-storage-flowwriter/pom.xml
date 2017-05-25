@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.tce</groupId>
+	<artifactId>tce-storage-flowwriter</artifactId>
+	<version>0.0.1</version>
+	<name>FlowWriter</name>
+	<description>分级存储-流量记录服务</description>
+
+
+
+	<properties>
+		<!-- Enable Java 8 -->
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- Configure the main class of our Spring Boot application -->
+		<start-class>com.tce.storage.Application</start-class>
+	</properties>
+
+	<!-- Inherit defaults from Spring Boot -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.3.2.RELEASE</version>
+	</parent>
+
+	<dependencies>
+		<!--项目数据库连接层 -->
+		<dependency>
+			<groupId>com.tce</groupId>
+			<artifactId>tce-storage-flowwriter-db</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
+		<!--项目测试层 -->
+		<dependency>
+			<groupId>com.tce</groupId>
+			<artifactId>tce-storage-flowwriter-connect</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
+
+		<!-- Get the dependencies of a web application -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- 热启动 开发环境 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- spring boot log4j -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<!--排除默认依赖日志jar -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j</artifactId>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- Linux 部署
+				1.使用mvn install进行打包，构建一个可执行的jar包。
+				
+				2.创建软连接到/etc/init.d/目录下  sudo ln -s /var/yourapp/yourapp.jar /etc/init.d/yourapp 
+				
+				3.启动、停止、重启操作(chmod授权) /etc/init.d/yourapp start|stop|restart -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+
+</project>
