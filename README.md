@@ -15,11 +15,13 @@
 		
 
 ##1.简要说明
+
 从 Spring Boot 项目名称中的 Boot 可以看出来，Spring Boot 的作用在于创建
 和启动新的基于 Spring 框架的项目。它的目的是帮助开发人员很容易的创建出独立运行和
 产品级别的基于 Spring 框架的应用。Spring Boot 会选择最适合的 Spring 子项目
 和第三方开源库进行整合。大部分 Spring Boot 应用只需要非常少的配置就可以快速运行
 起来。<br>
+
 ###Spring Boot 包含的特性如下：<br>
     • 创建可以独立运行的 Spring 应用。<br>
     • 直接嵌入 Tomcat 或 Jetty 服务器，不需要部署 WAR 文件。<br>
@@ -33,9 +35,9 @@
 
 ##2.模块启动参数设置
 
-    --server.port=					#模块开发端口
-    --spring.data.mongodb.host=				#mongo数据库地址IP
-    --spring.data.mongodb.database=			#mongo表空间
+    --server.port=#模块开发端口
+    --spring.data.mongodb.host=#mongo数据库地址IP
+    --spring.data.mongodb.database#mongo表空间
 
 ##3.swagger2 提供测试UI
 
