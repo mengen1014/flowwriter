@@ -32,9 +32,10 @@
 
 
 ##2.模块启动参数设置
-    --server.port=						        #模块开发端口
-    --spring.data.mongodb.host=			  #mongo数据库地址IP
-    --spring.data.mongodb.database=		#mongo表空间
+
+    --server.port=					#模块开发端口
+    --spring.data.mongodb.host=				#mongo数据库地址IP
+    --spring.data.mongodb.database=			#mongo表空间
 
 ##3.swagger2 提供测试UI
 
@@ -52,5 +53,5 @@
   
 注：<br/>
 	1.接口参数不区分大小写。<br/>
-		2.接口参数没有规定参数顺序，但都是非空参数。
+	2.接口参数没有规定参数顺序，但都是非空参数。
 
